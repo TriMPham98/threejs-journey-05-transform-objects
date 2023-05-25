@@ -19,14 +19,14 @@ scene.add(mesh);
 // mesh.position.z = 1;
 mesh.position.set(0.7, -0.6, 1);
 
-// Scale 
+// Scale
 // mesh.scale.x = 2;
 // mesh.scale.y = 0.5;
 // mesh.scale.z = 0.5;
 mesh.scale.set(2, 0.5, 0.5);
 
 // Rotation
-mesh.rotation.reorder('YXZ');
+mesh.rotation.reorder("YXZ");
 mesh.rotation.x = Math.PI * 0.25;
 mesh.rotation.y = Math.PI * 0.25;
 
@@ -46,9 +46,10 @@ const sizes = {
  * Camera
  */
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-camera.position.z = 3;
-camera.position.y = 0;
-camera.position.x = 0;
+// camera.position.z = 3;
+// camera.position.y = 0;
+// camera.position.x = 0;
+camera.position.set(0, 0, 3);
 scene.add(camera);
 
 camera.lookAt(mesh.position);
